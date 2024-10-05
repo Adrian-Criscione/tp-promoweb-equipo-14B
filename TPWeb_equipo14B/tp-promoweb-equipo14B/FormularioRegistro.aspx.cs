@@ -11,7 +11,7 @@ namespace tp_promoweb_equipo14B
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         protected void btnParticipar_Click(object sender, EventArgs e)
