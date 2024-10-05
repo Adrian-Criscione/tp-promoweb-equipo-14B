@@ -13,5 +13,11 @@ namespace tp_promoweb_equipo14B
         {
 
         }
+
+        protected void btnParticipar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
