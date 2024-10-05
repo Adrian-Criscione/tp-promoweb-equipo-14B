@@ -13,5 +13,10 @@ namespace tp_promoweb_equipo14B
         {
 
         }
+
+        protected void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

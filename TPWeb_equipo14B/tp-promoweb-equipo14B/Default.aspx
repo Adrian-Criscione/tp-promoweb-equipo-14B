@@ -2,4 +2,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+                 <h1>Participá y Ganá!</h1>
+                 <h3>Ingresá el código de tu voucher!</h3>
+                 <div class="mb-3">
+                 <asp:TextBox runat="server" CssClass="form-control" ID="txtVoucher" />
+                 </div>
+                 <asp:Button Text="Siguiente" CssClass="btn btn-primary" ID="btnSiguiente" OnClick="btnSiguiente_Click" runat="server" />
+            </div>
+            <div class="col-3"></div>
+           
+
+           
+        </div> 
+    </div>
+    
 </asp:Content>
