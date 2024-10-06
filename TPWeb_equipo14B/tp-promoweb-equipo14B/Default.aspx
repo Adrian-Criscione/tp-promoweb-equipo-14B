@@ -12,7 +12,11 @@
                  <asp:TextBox runat="server" CssClass="form-control" ID="txtVoucher" />
                  </div>
                  <asp:Button Text="Siguiente" CssClass="btn btn-primary" ID="btnSiguiente" OnClick="btnSiguiente_Click" runat="server" />
+                <div>
+                 <asp:Label ID="lblError" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                </div>
             </div>
+
             <div class="col-3"></div>
            
 
