@@ -13,8 +13,7 @@ namespace tp_promoweb_equipo14B
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Voucher voucher = new Voucher();
-            voucher = (Voucher)Session["voucher"];
+           
 
 
 
@@ -23,8 +22,28 @@ namespace tp_promoweb_equipo14B
 
         protected void btnParticipar_Click(object sender, EventArgs e)
         {
+            int idArticulo;
+            idArticulo = (int)Session["idArticulo"];
 
+            DateTime fechaActual = DateTime.Now;
+
+            Voucher voucher = new Voucher();
+            voucher = (Voucher)Session["voucher"];
+            VoucherNegocio voucherNegocio = new VoucherNegocio();
+            ClienteNegocio negocio = new ClienteNegocio();
+            Cliente resultado = negocio.BuscarCliente(txtDNI.Text);
+
+            voucher.IdArticulo = idArticulo;
+            voucher.FechaCanje = fechaActual;
+
+       
+                voucher.IdCliente = resultado.Id;
+                  
+            voucherNegocio.modificarVoucher(voucher);
         }
+
+
+ 
 
         protected void txtDNI_TextChanged(object sender, EventArgs e)
         {

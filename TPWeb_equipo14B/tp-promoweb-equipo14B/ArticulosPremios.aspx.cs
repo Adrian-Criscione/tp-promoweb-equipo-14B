@@ -3,6 +3,7 @@ using negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 
 
 namespace tp_promoweb_equipo14B
@@ -47,6 +48,13 @@ namespace tp_promoweb_equipo14B
 
         protected void btnElegir_Click(object sender, EventArgs e)
         {
+            Articulo articulo = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            
+            Button btn = (Button)sender;
+            int idArtiuclo = Convert.ToInt32(btn.CommandArgument);
+            Session["idArticulo"] = idArtiuclo;
+
             Response.Redirect("FormularioRegistro.aspx", false);
         }
     }
