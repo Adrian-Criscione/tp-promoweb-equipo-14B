@@ -72,7 +72,6 @@
     <Content Include="FormularioRegistro.aspx" />
     <Content Include="Global.asax" />
     <Content Include="VoucherInvalido.aspx" />
-    <Content Include="VoucherYaCargado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,13 +113,6 @@
     </Compile>
     <Compile Include="VoucherInvalido.aspx.designer.cs">
       <DependentUpon>VoucherInvalido.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VoucherYaCargado.aspx.cs">
-      <DependentUpon>VoucherYaCargado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VoucherYaCargado.aspx.designer.cs">
-      <DependentUpon>VoucherYaCargado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
