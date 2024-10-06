@@ -11,25 +11,26 @@ namespace tp_promoweb_equipo14B
         {
 
         }
-
         protected void btnSiguiente_Click(object sender, EventArgs e)
         {
             Voucher voucher = vn.BuscarVoucher(txtVoucher.Text);
             try
             {
-                if (voucher.CodigoVoucher != null)
+                if ( voucher.FechaCanje == null)
                 {
+                    // Si el voucher es válido y no se ha utilizado, redirige a ArticulosPremios
                     Session["voucher"] = voucher;
                     Response.Redirect("ArticulosPremios.aspx");
-                    //ponerle una label en la ventana que se abre 
-
-
+                }
+                else if (voucher.CodigoVoucher != null && voucher.IdCliente != null && voucher.FechaCanje != null && voucher.IdArticulo != null)
+                {
+                    // Si el voucher ya ha sido utilizado, redirige a la pantalla de VoucherYaCargado
+                    Response.Redirect("VoucherYaCargado.aspx");
                 }
                 else
                 {
-                    //lblError.Text = "Voucher inexistente";
+                    // Si no existe el voucher o no es válido, redirige a la pantalla de VoucherInvalido
                     Response.Redirect("VoucherInvalido.aspx");
-                    //ponerle una lbl en la ventana que se abre
                 }
 
             }
@@ -38,8 +39,9 @@ namespace tp_promoweb_equipo14B
 
                 throw;
             }
-           
+
 
         }
+
     }
 }
