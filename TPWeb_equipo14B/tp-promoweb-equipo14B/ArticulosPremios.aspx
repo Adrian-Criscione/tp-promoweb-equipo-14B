@@ -23,7 +23,7 @@
                                             runat="server"
                                             Text='<%# ObtenerTextoBoton(Container.ItemIndex) %>'
                                             CssClass="btn btn-primary btn-block mb-2"
-                                            Style="background-color: #007bff; color: white;" />
+                                            Style="background-color: #007bff; color: white;" OnClick="btnElegir_Click" />
                                     </div>
                                 </div>
                             </div>

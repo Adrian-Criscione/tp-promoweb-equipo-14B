@@ -9,7 +9,7 @@
         <div class="col">
             <div class="mb-3">
                 <label for="txtDNI" class="form-label">DNI</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtDNI" />
+                <asp:TextBox runat="server" AutoPostBack ="true" CssClass="form-control" ID="txtDNI" OnTextChanged="txtDNI_TextChanged" />
             </div>
             <div class="mb-3">
                 <label for="txtNombre" class="form-label">Nombre</label>
@@ -28,6 +28,14 @@
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtDireccion" />
             </div>
             <div class="mb-3">
+                <label for="txtCiudad" class="form-label">Ciudad</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtCiudad" />
+            </div>
+            <div class="mb-3">
+                <label for="txtCP" class="form-label">CP</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtCP" />
+            </div>
+            <%--<div class="mb-3">
                 <label for="ddlProvincias" class="form-label">Provincia</label>
                 <asp:DropDownList ID="ddlProvincias" CssClass="form-select" runat="server">
                     <asp:ListItem Text="Buenos Aires" />
@@ -55,9 +63,9 @@
                     <asp:ListItem Text="Tierra del Fuego" />
                     <asp:ListItem Text="Tucumán" />
                 </asp:DropDownList>
-            </div>
+            </div>--%>
             <div class="mb-3">
-                <asp:CheckBox Text= "Acepto los términos y condiciones."  runat="server" />
+                <asp:CheckBox Text="Acepto los términos y condiciones." runat="server" />
             </div>
 
 

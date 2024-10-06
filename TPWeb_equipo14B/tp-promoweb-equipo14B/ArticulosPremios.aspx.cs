@@ -11,7 +11,10 @@ namespace tp_promoweb_equipo14B
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarArticulos();
+            if(!IsPostBack)
+            {
+                cargarArticulos();
+            }
         }
 
         protected void cargarArticulos()
@@ -40,6 +43,11 @@ namespace tp_promoweb_equipo14B
                 default:
                     return "Seleccionar";
             }
+        }
+
+        protected void btnElegir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FormularioRegistro.aspx", false);
         }
     }
 }
