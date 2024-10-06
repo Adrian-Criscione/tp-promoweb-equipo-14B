@@ -7,6 +7,7 @@
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="p-5 bg-light ">
                 <h2 class="fw-bold">GRACIAS POR PARTICIAR</h2>
+
                 <a class="btn btn-primary" href="Default.aspx">Volver</a>
             </div>
         </div>

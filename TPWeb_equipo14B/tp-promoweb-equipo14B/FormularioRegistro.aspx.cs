@@ -12,11 +12,7 @@ namespace tp_promoweb_equipo14B
     public partial class FormularioRegistro : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-           
-
-
-
+        {        
 
         }
 
