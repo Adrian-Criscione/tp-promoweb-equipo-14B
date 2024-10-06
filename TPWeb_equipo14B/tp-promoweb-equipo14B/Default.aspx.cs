@@ -14,18 +14,31 @@ namespace tp_promoweb_equipo14B
 
         protected void btnSiguiente_Click(object sender, EventArgs e)
         {
-
             Voucher voucher = vn.BuscarVoucher(txtVoucher.Text);
-            if (voucher.CodigoVoucher != null)
+            try
             {
-                Session["voucher"] = voucher;
-                lblError.Text = "Voucher ingresado correctamente";
+                if (voucher.CodigoVoucher != null)
+                {
+                    Session["voucher"] = voucher;
+                    Response.Redirect("ArticulosPremios.aspx");
+                    //ponerle una label en la ventana que se abre 
+
+
+                }
+                else
+                {
+                    //lblError.Text = "Voucher inexistente";
+                    Response.Redirect("VoucherInvalido.aspx");
+                    //ponerle una lbl en la ventana que se abre
+                }
 
             }
-            else
+            catch (Exception)
             {
-                lblError.Text = "Voucher inexistente";
+
+                throw;
             }
+           
 
         }
     }

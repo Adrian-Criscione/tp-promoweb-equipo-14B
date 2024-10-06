@@ -13,5 +13,10 @@ namespace tp_promoweb_equipo14B
         {
 
         }
+
+        protected void btnVolver_click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }
