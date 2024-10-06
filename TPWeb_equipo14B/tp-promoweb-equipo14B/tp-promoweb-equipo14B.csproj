@@ -71,6 +71,7 @@
     <Content Include="Default.aspx" />
     <Content Include="FormularioRegistro.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Gracias.aspx" />
     <Content Include="VoucherInvalido.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Gracias.aspx.cs">
+      <DependentUpon>Gracias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gracias.aspx.designer.cs">
+      <DependentUpon>Gracias.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

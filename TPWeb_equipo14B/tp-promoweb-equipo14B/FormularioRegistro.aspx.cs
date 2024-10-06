@@ -36,14 +36,35 @@ namespace tp_promoweb_equipo14B
             voucher.IdArticulo = idArticulo;
             voucher.FechaCanje = fechaActual;
 
-       
+            if (resultado.Id == 0)
+            {
+                generarCliente();
+                resultado = negocio.BuscarCliente(txtDNI.Text);
                 voucher.IdCliente = resultado.Id;
-                  
+            }
+            else
+            {
+
+                voucher.IdCliente = resultado.Id;
+            }
+
             voucherNegocio.modificarVoucher(voucher);
+            Response.Redirect("Gracias.aspx",false);
         }
+        protected void generarCliente()
+        {
+            Cliente cliente = new Cliente();
+            ClienteNegocio negocio = new ClienteNegocio();
+            cliente.Documento = txtDNI.Text;
+            cliente.Apellido = txtApellido.Text;
+            cliente.Nombre = txtNombre.Text;
+            cliente.Email = txtEmail.Text;
+            cliente.Direccion = txtDireccion.Text;
+            cliente.Ciudad = txtCiudad.Text;
+            cliente.CP = Convert.ToInt32(txtCP.Text);
 
-
- 
+            negocio.agregarCliente(cliente);
+        }
 
         protected void txtDNI_TextChanged(object sender, EventArgs e)
         {
