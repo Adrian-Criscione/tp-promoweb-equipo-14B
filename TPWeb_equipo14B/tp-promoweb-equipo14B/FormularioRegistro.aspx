@@ -42,7 +42,7 @@
                 <asp:Label runat="server" ID="lblErrorCP" ForeColor="Red"></asp:Label>
             </div>
             <div class="mb-3">
-                <asp:CheckBox ID="chkTerminos" Text="Acepto los términos y condiciones." runat="server" />
+                <asp:CheckBox ID="chkTerminos" Text="Acepto los términos y condiciones." AutoPostBack="false" runat="server" OnCheckedChanged="chkTerminos_CheckedChanged" />
                 <asp:Label runat="server" ID="lblErrorTerminos" ForeColor="Red"></asp:Label>
             </div>
             <asp:Label runat="server" ID="lblErrorParticipar" ForeColor="Red"></asp:Label>

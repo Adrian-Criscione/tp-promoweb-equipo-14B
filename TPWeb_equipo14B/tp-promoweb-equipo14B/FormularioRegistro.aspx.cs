@@ -35,7 +35,7 @@ namespace tp_promoweb_equipo14B
                 voucher.IdArticulo = idArticulo;
                 voucher.FechaCanje = fechaActual;
 
-                if (!ValidarTerminos())
+                if (ValidarTerminos(chkTerminos, lblErrorTerminos))
                 {
                     if (resultado.Id == 0)
                     {
@@ -179,7 +179,7 @@ namespace tp_promoweb_equipo14B
         {
             ValidarSoloNumeros(txtCP, lblErrorCP);
         }
-        protected bool ValidarTerminos()
+        protected bool ValidarTerminos(CheckBox chkTerminos, Label labelError)
         {
             // Limpiar mensajes de error
             lblErrorTerminos.Text = "";
@@ -192,6 +192,10 @@ namespace tp_promoweb_equipo14B
             }
 
             return true; // Retorna true si está marcado
+        }
+        protected void chkTerminos_CheckedChanged(object sender, EventArgs e)
+        {
+            ValidarTerminos(chkTerminos, lblErrorTerminos);
         }
     }
 }
